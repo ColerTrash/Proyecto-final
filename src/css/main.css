@@ -1,0 +1,165 @@
+body{
+    overflow-x: hidden;
+}
+header{
+    font-size: 1.5rem;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "logo opciones";
+    padding: 20px 0px;
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.icon{
+    padding-left: calc(80px - 40px);
+    grid-area: logo;
+}
+.icon img{
+    width: 100px;
+    height: 80px;
+    padding-left: 20px;
+}
+.botones{
+    font-family: 'Open Sans', sans-serif;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    grid-area: opciones;
+}
+.botones li{
+    padding-top: 10px;
+    list-style: none;
+}
+ul{
+    display: none;
+}
+ul.list-items{
+    background-color: rgba(0, 0, 0, 0.799);
+    position: absolute;
+    margin-top: 25px;
+}
+ul a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    height: fit-content;
+    padding: 12px 40px;
+    position: relative;
+    outline: none;
+}
+
+header .botones li > a{
+    text-decoration: none;
+    color: black;
+    height: fit-content;
+    padding: 12px 40px;
+    position: relative;
+    outline: none;
+}
+.botones li.list-items:nth-child(-n + 3) a:after{
+    content: '';
+    left: calc(20%);
+    background-color: #000;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: .5s ease;
+}
+header .botones li.list-items:nth-child(-n+3) a:hover:after{
+    width: 70%;
+}
+#unirme{
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    transition: .5s all ease-out;
+}
+#unirme:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;   
+}
+.user i{
+    color: black;
+    margin: 0;
+    display: inline;    
+}
+.user p{
+    display: inline;
+}
+.username{
+    padding-right: 10px;
+}
+.collapse-items{
+    position: absolute;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    display: none;
+    animation: aparecer 1s normal;
+}
+.collapse-items li{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+/* main */
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "texto imagen";
+    padding-left: 5%;
+    gap: 100px;
+}
+.main-left{
+    grid-area: texto;
+}
+.main-left h1{
+    font-size: 80px;
+    margin: 0;
+    font-family: 'Alata', sans-serif;
+    font-weight: lighter;
+}
+.main-left p{
+    padding: 40px 0 70px 0;
+}
+.main-left a{
+    padding: 15px 35px;
+    border-radius: 30px;
+    width: fit-content;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    font-family: 'Alata', sans-serif;
+    font-size: 23px;
+    transition: .5s ease all;
+}
+.main-left a:hover{
+    background-color: black;
+    color: white;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.616);
+}
+.main-right{
+    grid-area: imagen;
+}
+.main-right img{
+    filter: drop-shadow(-25px 40px 20px rgba(0, 0, 0, 0.25));
+}
+
+.col{
+    padding-top: 10px;
+}
+body > div > form > div{
+    padding-top: 10px;
+}
